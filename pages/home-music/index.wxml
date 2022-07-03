@@ -1,0 +1,24 @@
+<!-- 轮播图 -->
+<van-search
+  shape="round"
+  background="#f5f5f5"
+  placeholder="搜索您喜欢的歌曲"
+  bindtap="searchClick"
+  disabled
+/>
+
+<!-- 轮播图 -->
+<swiper class="swiper" 
+         circular 
+        indicator-dots	
+        indicator-active-color="#ffffff"
+        previous-margin="40rpx" 
+        next-margin="40rpx"
+        style="height: {{swiperHeight}}px;"
+        bindchange="imageChange">
+    <swiper-item class="swiper-item" wx:for="{{banners}}" wx:key="bannerId">
+      <view class="swiper-box {{index===currentBannerIndex ? 'swiper-active-box': ''}}">
+        <image class="swiper-image" src="{{item.pic}}" mode="widthFix" bindload="loadImage"></image>
+      </view>
+    </swiper-item>
+</swiper>

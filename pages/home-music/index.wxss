@@ -1,0 +1,44 @@
+/* pages/home-music/index.wxss */
+page {
+  padding: 0 20rpx;
+}
+
+/* 搜索框 */
+.van-search {
+  padding: 20rpx 0 !important;
+}
+
+.van-search__content {
+  background: #fff !important;
+}
+
+/* 轮播图 */
+.swiper {
+  width: 100vw;
+  position: relative;
+  left: -20rpx;
+  margin-top: 20rpx;
+}
+
+.swiper-item {
+  padding: 0 10rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.swiper-item .swiper-box {
+  transform: scaleY(0.8);
+}
+
+.swiper-item .swiper-active-box {
+  transform: scaleY(1);
+  transition: transform .3s;
+}
+
+.swiper-item .swiper-image {
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+

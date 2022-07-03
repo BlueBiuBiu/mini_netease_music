@@ -1,0 +1,98 @@
+/* pages/search/index.wxss */
+page {
+  padding: 0 20rpx;
+}
+
+/* 搜索框 */
+.van-search {
+  padding: 20rpx 0 !important;
+}
+
+.van-search__content {
+  background: #fff !important;
+}
+
+/* 热门搜索 */
+.hotTitle {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 20rpx 0;
+}
+
+.hotKeyWord {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx;
+}
+
+.hotKeyWord .item {
+  font-size: 26rpx;
+  background-color: #fff;
+  padding: 8rpx 12rpx;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.hotKeyWord .item:first-of-type {
+  color: #26ce8a;
+}
+
+/* 搜索结果 */
+.resultTitle {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #26ce8a;
+  margin: 30rpx 0;
+}
+
+.list .item {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+
+.list .item .icon {
+  width: 66rpx;
+  margin-left: -20rpx;
+  margin-right: 20rpx;
+}
+
+/* 最佳匹配 */
+.bestList {
+  padding: 0 10rpx;
+}
+
+.bestList .item {
+  display: flex;
+  align-items: center;
+  margin: 36rpx 0 10rpx;
+  box-sizing: border-box;
+}
+
+.bestList .item .right {
+  width: calc(100% - 40rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30rpx;
+}
+
+.bestList .item .right .name {
+  font-size: 30rpx;
+}
+
+.bestList .rightBottom {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 16rpx;
+}
+
+.bestList .rightBottom .icon {
+  width: 38rpx;
+  height: 22rpx;
+  margin-right: 10rpx;
+}
+

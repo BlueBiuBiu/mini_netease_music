@@ -1,0 +1,54 @@
+<!--pages/search/index.wxml-->
+<!-- 搜索框 -->
+<van-search
+  value="{{ searchValue }}"
+  shape="round"
+  background="#f5f5f5"
+  show-action="{{searchValue}}"
+  bind:change="searchContentChange"
+  bind:cancel="searchContentCancel"
+  bind:clear="searchContentCancel"
+/>
+
+<!-- 热门搜索 -->
+<block wx:if="{{!searchValue}}">
+  <view class="hotTitle">热门搜索</view>
+  <view class="hotKeyWord">
+    <view class="item" wx:for="{{hotKeywords}}"
+          bindtap="hotKeyClick" data-item="{{item}}">
+      <text>{{item.first}}</text>
+    </view>
+  </view>
+</block>
+
+<!-- 搜索结果 -->
+<block wx:elif="{{searchType === 'normal'}}">
+  <view class="resultTitle">搜索"{{searchValue}}"</view>
+  <view class="list">
+    <block wx:for="{{suggestSongs}}">
+      <view class="item" bindtap="hotKeyClick" data-item="{{item}}">
+        <image class="icon" src="/assets/images/icons/search_icon.png" mode="widthFix"></image>
+        <rich-text nodes="{{richSearchSongs[index]}}"></rich-text>
+      </view>
+    </block>
+  </view>
+</block>
+
+<!-- 最佳匹配 -->
+<block wx:elif="{{searchType === 'best'}}">
+  <view class="resultTitle">最佳匹配"</view>
+  <view class="bestList">
+    <block wx:for="{{searchSongs}}">
+      <view class="item" bindtap="toMusicPlay" data-item="{{item}}">
+        <view>{{index+1}}</view>
+        <view class="right">
+          <view class="name ellipsis">{{item.name}}</view>
+          <view class="rightBottom">
+            <image class="icon" src="/assets/images/icons/sq_icon.png" mode="widthFix"></image>
+            <text class="ellipsis">{{item.artists[0].name}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>

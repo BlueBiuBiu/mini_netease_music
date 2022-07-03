@@ -1,0 +1,29 @@
+{
+  "projectname": "%E5%8E%9F%E7%94%9F",
+  "setting": {
+    "compileHotReLoad": false,
+    "urlCheck": false
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "search",
+          "pathName": "pages/search/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "music-play",
+          "pathName": "pages/music-play/index",
+          "query": "id=1892552308",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "libVersion": "2.9.5"
+}
